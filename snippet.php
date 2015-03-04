@@ -15,7 +15,8 @@ function tricd_remove_wp_version_rss()
 
 }
 
-add_filter('the_generator','tricd_remove_wp_version_rss');
+add_filter('the_generator', 'tricd_remove_wp_version_rss');
+
 
 /*
  * Remove version numbers from stylesheet and javascript queues
@@ -23,7 +24,7 @@ add_filter('the_generator','tricd_remove_wp_version_rss');
 function tricd_remove_wp_version_css_js_parameter($url)
 {
 	if (strpos( $url, 'ver=')) {
-		$url = remove_query_arg( 'ver', $url );
+		$url = remove_query_arg('ver', $url);
 	}
 
 	return $url;
